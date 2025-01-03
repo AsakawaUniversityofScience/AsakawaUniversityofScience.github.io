@@ -6,79 +6,133 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>浅川科学大学</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        /* 全局样式 */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         /* 顶部导航栏样式 */
         header {
             background-color: #003366;
             color: white;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
         }
 
         header h1 {
+            font-size: 40px;
             margin: 0;
-            font-size: 36px;
         }
 
         nav {
-            background-color: #003366;
+            background-color: #004080;
             display: flex;
             justify-content: center;
-            padding: 10px 0;
+            padding: 15px 0;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
-            padding: 14px 20px;
+            padding: 10px 20px;
             font-size: 18px;
+            display: block;
             text-align: center;
         }
 
         nav a:hover {
-            background-color: #00509E;
+            background-color: #00509e;
         }
 
-        /* 页面主体样式 */
-        .section {
-            display: none; /* 默认不显示内容 */
-            padding: 60px 20px;
-        }
-
-        .section h2 {
+        /* 首页主视觉图 */
+        .hero {
+            background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-align: center;
-            font-size: 28px;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 24px;
+        }
+
+        /* 主体内容布局 */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+
+        .section {
+            width: 32%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 24px;
             margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* 新闻动态部分 */
+        .news {
+            background-color: #003366;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .news h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             color: #003366;
         }
 
-        .intro, .departments, .news {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+        .news-item h3 {
+            font-size: 18px;
         }
 
-        .intro div, .departments div, .news div {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            width: 30%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .departments div {
-            padding: 30px;
-        }
-
-        .news div {
-            padding: 15px;
+        .news-item p {
+            font-size: 14px;
+            color: #666;
         }
 
         footer {
@@ -86,21 +140,24 @@
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 40px;
         }
 
         /* 响应式设计 */
         @media (max-width: 768px) {
-            .intro, .departments, .news {
+            .content {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .intro div, .departments div, .news div {
+            .section {
                 width: 80%;
                 margin-bottom: 20px;
+            }
+
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -109,114 +166,78 @@
 
 <!-- 顶部导航栏 -->
 <header>
-    <h1>浅川科学大学</h1>
-    <p>致力于创新与卓越</p>
+    <h1>浅川科學大學|あさかわかがくだいがく</h1>
+    <p>推动科学与文化发展</p>
 </header>
 
 <!-- 导航菜单 -->
 <nav>
-    <a href="#" onclick="showSection('about')">学校简介</a>
-    <a href="#" onclick="showSection('departments')">学院与学科</a>
-    <a href="#" onclick="showSection('admissions')">招生信息</a>
-    <a href="#" onclick="showSection('news')">最新动态</a>
-    <a href="#" onclick="showSection('contact')">联系我们</a>
+  <a href="index.html">首页</a>
+    <a href="departments.html">学院与学科</a>
+    <a href="admissions.html">招生信息</a>
+    <a href="research.html">科研成果</a>
+    <a href="news.html">新闻动态</a>
+    <a href="contact.html">联系我们</a>
 </nav>
 
-<!-- 学校简介 -->
-<section id="about" class="section">
-    <h2>关于浅川科学大学</h2>
-    <div class="intro">
-        <div>
-            <h3>学校概况</h3>
-            <p>浅川科学大学创建于1980年，位于美丽的浅川市，致力于培养具有全球视野的创新型人才，推动科学技术的不断发展。</p>
-        </div>
-        <div>
-            <h3>学校文化</h3>
-            <p>我们的校训是“求知、求真、创新”。学校倡导自由探索的学术氛围，鼓励学生独立思考，勇于创新。</p>
-        </div>
-        <div>
-            <h3>办学理念</h3>
-            <p>浅川科学大学秉承“教学、科研、服务社会”的理念，致力于推动跨学科的合作与创新，为社会培养高素质的科技人才。</p>
-        </div>
+<!-- 首页主视觉图 -->
+<div class="hero">
+    <div>
+        <h2>这里是浅川科學大學（あさかわかがくだいがく）</h2>
+        <p>This is the Science Asakawa.</p>
     </div>
-</section>
+</div>
 
-<!-- 学院与学科 -->
-<section id="departments" class="section">
-    <h2>学院与学科</h2>
-    <div class="departments">
-        <div>
-            <h3>计算机科学学院</h3>
-            <p>计算机科学学院专注于人工智能、数据科学、软件工程等领域的研究，致力于培养技术型与创新型的人才。</p>
-        </div>
-        <div>
-            <h3>物理学学院</h3>
-            <p>物理学学院聚焦于现代物理及其应用研究，探索基础科学与前沿技术的结合，推动物理学的创新发展。</p>
-        </div>
-        <div>
-            <h3>生命科学学院</h3>
-            <p>生命科学学院研究涉及基因组学、分子生物学等领域，致力于生物医药和健康产业的发展，推动生物科学的突破。</p>
-        </div>
+<!-- 主体内容 -->
+<div class="content">
+    <div class="section">
+        <h3>学校简介</h3>
+        <p>这里是浅川科學大學（あさかわかがくだいがく）成立于2024年</p>
+  <p>This is the Science Asakawa.</p>
+<p>欢迎来到浅科大！
+开设数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等相关专业喵
+希望小菲们和谐友爱的交流学习，一起变成自己想成为的人喵！</p>
     </div>
-</section>
+    <div class="section">
+        <h3>学院与学科</h3>
+        <p>浅川科学大学设有多个学院，涉及数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等领域，培养创新型人才。</p>
+    </div>
+    <div class="section">
+        <h3>招生信息</h3>
+        <p>每年招收大量优秀学生，提供本科、硕士及博士的多层次招生。欢迎有志青年加入我们的大家庭。</p>
+    </div>
+</div>
 
-<!-- 招生信息 -->
-<section id="admissions" class="section">
-    <h2>招生信息</h2>
-    <p>浅川科学大学面向全国招收本科生、研究生，欢迎有志的学子加入我们。我们的招生信息将在每年的6月和12月公布，敬请关注。</p>
-</section>
-
-<!-- 最新动态 -->
-<section id="news" class="section">
+<!-- 新闻动态 -->
+<div class="news" id="news">
     <h2>最新动态</h2>
-    <div class="news">
+    <div class="news-item">
         <div>
-            <h3>学校新址揭牌仪式</h3>
-            <p>2025年4月，浅川科学大学新校区揭牌仪式成功举行，标志着学校迈入了新的发展阶段。</p>
+            <h3>新校区落成</h3>
+            <p>2024年9月22日，浅川科学大学的新校区正式投入使用，成为现代化校园的象征。</p>
         </div>
         <div>
             <h3>创新科技大会</h3>
-            <p>2025年5月，学校将举办首届“创新科技大会”，邀请国内外知名专家学者分享最新科研成果。</p>
-        </div>
-        <div>
-            <h3>招生说明会</h3>
-            <p>2025年6月，学校将举行线上和线下招生说明会，详细解答报考问题，欢迎考生及家长参加。</p>
+            <p>2025年5月，学校将举办首届创新科技大会，邀请全球知名学者和专家进行学术交流。</p>
         </div>
     </div>
-</section>
-
-<!-- 联系我们 -->
-<section id="contact" class="section">
-    <h2>联系我们</h2>
-    <p>地址：浅川市科技路100号</p>
-    <p>电话：010-12345678</p>
-    <p>邮箱：info@qianchuan.edu.cn</p>
-</section>
+    <div class="news-item">
+        <div>
+            <h3>招生简章发布</h3>
+            <p>浅川科学大学2025年招生简章已发布，欢迎报考。请访问我们的官方网站查看详细信息。</p>
+        </div>
+        <div>
+            <h3>科学奖学金计划</h3>
+            <p>2025年秋季学期起，学校将推出新的奖学金计划，鼓励优秀学生投身科研。</p>
+        </div>
+    </div>
+</div>
 
 <!-- 页脚 -->
 <footer>
     <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+    <p>地址：日本東京都文京区目白台2丁目8-2 | 电话：03-3726-11114514 | 邮箱：qianchuanimc@163.com</p>
 </footer>
-
-<script>
-    // 默认显示学校简介
-    showSection('about');
-
-    // 切换显示不同的部分
-    function showSection(sectionId) {
-        // 隐藏所有部分
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.style.display = 'none';
-        });
-
-        // 显示点击的部分
-        const selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-            selectedSection.style.display = 'block';
-        }
-    }
-</script>
 
 </body>
 </html>
