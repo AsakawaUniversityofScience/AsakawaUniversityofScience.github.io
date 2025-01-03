@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>科研成果 - 浅川科学大学</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 全局样式 */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          background-image: url('6.jpg'); /* 替换为实际的图片路径 */
+          background-size: cover; /* 图片自适应屏幕大小 */
+          background-position: center center; /* 图片居中显示 */
+          background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+          font-family: 'Arial', sans-serif;
+          color: #333;
+      }
+      a {
+          text-decoration: none;
+          color: inherit;
+      }
+    
+      /* 顶部导航栏样式 */
+      header {
+          background-color: #003366;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+    
+      header h1 {
+          font-size: 40px;
+          margin: 0;
+      }
+    
+      nav {
+          background-color: #004080;
+          display: flex;
+          justify-content: center;
+          padding: 15px 0;
+      }
+    
+      nav a {
+          color: white;
+          padding: 10px 20px;
+          font-size: 18px;
+          display: block;
+          text-align: center;
+      }
+    
+      nav a:hover {
+          background-color: #00509e;
+      }
+    
+      /* 首页主视觉图 */
+      .hero {
+          background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
+          background-size: cover;
+          background-position: center;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          text-align: center;
+      }
+    
+      .hero h2 {
+          font-size: 50px;
+          font-weight: bold;
+      }
+    
+      .hero p {
+          font-size: 24px;
+      }
+    
+      /* 主体内容布局 */
+      .content {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 20px;
+      }
+    
+      .section {
+          width: 32%;
+          background-color: white;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+    
+      .section h3 {
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+    
+      .section p {
+          font-size: 16px;
+          color: #666;
+      }
+    
+      /* 新闻动态部分 */
+      .news {
+          background-color: #003366;
+          color: white;
+          padding: 40px 20px;
+          text-align: center;
+      }
+    
+      .news h2 {
+          font-size: 30px;
+          margin-bottom: 20px;
+      }
+    
+      .news-item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          background-color: white;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          color: #003366;
+      }
+    
+      .news-item h3 {
+          font-size: 18px;
+      }
+    
+      .news-item p {
+          font-size: 14px;
+          color: #666;
+      }
+    
+      footer {
+          background-color: #003366;
+          color: white;
+          text-align: center;
+          padding: 20px;
+          margin-top: 40px;
+      }
+    
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+          .content {
+              flex-direction: column;
+              align-items: center;
+          }
+    
+          .section {
+              width: 80%;
+              margin-bottom: 20px;
+          }
+    
+          .news-item {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      }
+    </style>
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<header>
+    <h1>浅川科學大學|あさかわかがくだいがく</h1>
+    <p>推动科学与文化发展</p>
+</header>
+
+<!-- 导航菜单 -->
+<nav>
+    <a href="index.html" class="nav-link">首页</a>
+    <a href="departments.html" class="nav-link">学院与学科</a>
+    <a href="admissions.html" class="nav-link">招生信息</a>
+    <a href="research.html" class="nav-link">科研成果</a>
+    <a href="news.html" class="nav-link">新闻动态</a>
+    <a href="contact.html" class="nav-link">联系我们</a>
+</nav>
+
+<!-- 科研成果内容 -->
+<style>
+    /* 主体内容布局 */
+    .content {
+        display: flex;
+        flex-direction: column;  /* 保持竖直排列 */
+        align-items: stretch;    /* 让每个section占满父容器的宽度 */
+        padding: 40px 20px;
+    }
+
+    .section {
+        width: 100%;             /* 让section的宽度占满整个父容器 */
+        margin-bottom: 7px;     /* 每个部分之间的间距 */
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .section p {
+        font-size: 16px;
+        color: #666;
+    }
+    .college-image {
+        max-width: 100%; /* 使图片最大宽度为容器宽度 */
+        height: auto; /* 保持图片比例 */
+        border-radius: 8px; /* 图片圆角 */
+        margin-top: 20px; /* 图片上方的间距 */
+        display: block; /* 使图片成为块级元素，避免旁边有文本 */
+        margin-left: auto;
+        margin-right: auto; /* 使图片居中显示 */
+    }
+</style>
+<div class="content">
+    <h2>科研成果</h2>
+    <p>浅川科学大学致力于推动创新和科学研究，我们的学者在多个领域取得了卓越的成果。</p>
+    <div class="section">
+        <h3>量子计算研究</h3>
+        <p>我们在量子计算领域取得了重要突破，为全球科技进步做出了积极贡献。</p>
+    </div>
+    <div class="section">
+        <h3>人工智能与机器学习</h3>
+        <p>我们的研究团队在人工智能和机器学习领域的创新为智能技术的发展做出了显著贡献。</p>
+    </div>
+    <div class="section">
+        <h3>生命科学研究</h3>
+        <p>生命科学领域的多项研究成果在全球学术界产生了深远影响，特别是在癌症治疗和基因编辑方面。</p>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+    <p>地址：日本東京都文京区目白台2丁目8-2 | 电话：03-3726-11114514 | 邮箱：qianchuanimc@163.com</p>
+</footer>
+
+</body>
+</html>

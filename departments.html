@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学院与学科 - 浅川科學大學</title>
+    <style>
+          /* 全局样式 */
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url('101.png'); /* 替换为实际的图片路径 */
+            background-size: cover; /* 图片自适应屏幕大小 */
+            background-position: center center; /* 图片居中显示 */
+            background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 顶部导航栏样式 */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #004080;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #00509e;
+        }
+
+        /* 首页主视觉图 */
+        .hero {
+            background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 24px;
+        }
+
+        /* 主体内容布局 */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+
+        .section {
+            width: 32%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* 新闻动态部分 */
+        .news {
+            background-color: #003366;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .news h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            color: #003366;
+        }
+
+        .news-item h3 {
+            font-size: 18px;
+        }
+
+        .news-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<header>
+    <h1>浅川科學大學 | あさかわかがくだいがく</h1>
+    <p>推动科学与文化发展</p>
+</header>
+
+<!-- 导航菜单 -->
+<nav>
+    <a href="index.html">首页</a>
+    <a href="departments.html" class="active">学院与学科</a>
+    <a href="admissions.html">招生信息</a>
+    <a href="research.html">科研成果</a>
+    <a href="news.html">新闻动态</a>
+    <a href="contact.html">联系我们</a>
+</nav>
+
+<!-- 主体内容 -->
+<style>
+    /* 主体内容布局 */
+    .content {
+        display: flex;
+        flex-direction: column;  /* 保持竖直排列 */
+        align-items: stretch;    /* 让每个section占满父容器的宽度 */
+        padding: 40px 20px;
+    }
+
+    .section {
+        width: 100%;             /* 让section的宽度占满整个父容器 */
+        margin-bottom: 7px;     /* 每个部分之间的间距 */
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .section p {
+        font-size: 16px;
+        color: #666;
+    }
+    .college-image {
+        max-width: 100%; /* 使图片最大宽度为容器宽度 */
+        height: auto; /* 保持图片比例 */
+        border-radius: 8px; /* 图片圆角 */
+        margin-top: 20px; /* 图片上方的间距 */
+        display: block; /* 使图片成为块级元素，避免旁边有文本 */
+        margin-left: auto;
+        margin-right: auto; /* 使图片居中显示 */
+    }
+</style>
+
+<div class="content">
+    <div class="section">
+        <h3>浅川科学大学图书馆</h3>
+        <p>这里收录了浅川科学大学进行教学研究用的各种书籍。</p>
+        <a href="https://github.com/AsakawaUniversityofScience/Asakawa-Library-/tree/main" target="_blank" rel="noopener" class="library-link">点击这里访问：浅川科学大学图书馆</a>
+        <img src="library.png" alt="学院图片" class="college-image">
+    </div>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h3>浅川科學大學数学科学学院</h3>
+        <p>这里是浅川科學大學的研究生院！！！</p>
+        <p> 来到这里的小菲尝试和其他小菲开始一场残酷的数批辩论赛，来分出对错！！！</p>
+        <p> 这里不准水群，大声喧哗者将会被警告一次。</p>
+        <p> 两次以上将会被休学，按情况记过处分，达到一定时间后可以申请取消处分。</p>
+        <p> 目前设有每日大赛，每人每天可上传好题，精彩的定理，比比谁的定理更霸道！</p>
+        <p>加入讨论群：<strong>194997107</strong></p>  
+        
+    </div>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h3>男娘心理学专业</h3>
+        <p>在现代社会，“男娘”的心理吸引力已成为许多人非常关心的问题。 </p>
+        <p>作为超越性别的“男娘”，被很多人接受和支持。 它的吸引力是巨大的。</p>
+        <p>尤其是在年轻一代中，美学和新价值观的影响被广泛认为是一种不受传统性别角色束缚的自我表达形式。</p>
+
+        <p>男娘不仅在美学上令人愉悦，而且在心理上也很有吸引力。 </p>
+            
+        <p>尊重每个人的个性并接受多样性是男娘的本质，这种现象反映了整个社会价值观的转变，创造了一个让更多人可以自由表达自我的环境。 </p>
+            
+        <p>在本学科中，我们将深入研究男娘和异装癖者的心理吸引力，并分析其吸引力背后的因素。</p>
+        
+        <p>我们旨在提供一个新的视角来理解男娘的吸引力，并从不同的角度把握社会。 </p>
+            
+        <p>通过探索男娘的心理吸引力，希望帮助建立一个更富裕的社会。</p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h3>计算机科学与数据科学学院</h3>
+        <p>我们的计算机科学与工程学院致力于计算机技术的前沿研究，培养具有创新能力的技术人才。</p>
+        <p>同时融合了统计与数据科学，以满足不断发展的社会需要</p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h3>外国语学院</h3>
+        <p>浅川科学大学也会致力于研究一些外语（但主要是英语和日语）</p>
+        <p>浅科大希望通过外国语学院的外语课程，帮助小菲们提高外语能力，顺利通过一些语言考试，帮助出国交流拓宽国际视野铺平道路</p>
+        <p>同时，也希望小菲们能通过阅读原著文献或文学作品，提高自己的学术能力与人文素养</p>
+        <p>正如浅科大校训：“推动科学与文化发展”</p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section">
+        <h3>政治经济学院</h3>
+        <p>浅川科學大學政治经济学院致力于关注政治经济文化，学习政治与经济等社会科学知识</p>
+        <p>学院尝试通过关注分析社会热点问题，分享解读政治经济教材等提高小菲的政治经济素养</p>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+    <p>地址：日本東京都文京区目白台2丁目8-2 | 电话：03-3726-11114514 | 邮箱：qianchuanimc@163.com</p>
+</footer>
+
+</body>
+</html>

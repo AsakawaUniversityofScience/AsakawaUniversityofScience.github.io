@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>招生信息 - 浅川科学大学</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 全局样式 */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          background-image: url('5.jpg'); /* 替换为实际的图片路径 */
+          background-size: cover; /* 图片自适应屏幕大小 */
+          background-position: center center; /* 图片居中显示 */
+          background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+          font-family: 'Arial', sans-serif;
+          color: #333;
+      }
+      a {
+          text-decoration: none;
+          color: inherit;
+      }
+
+      /* 顶部导航栏样式 */
+      header {
+          background-color: #003366;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+
+      header h1 {
+          font-size: 40px;
+          margin: 0;
+      }
+
+      nav {
+          background-color: #004080;
+          display: flex;
+          justify-content: center;
+          padding: 15px 0;
+      }
+
+      nav a {
+          color: white;
+          padding: 10px 20px;
+          font-size: 18px;
+          display: block;
+          text-align: center;
+      }
+
+      nav a:hover {
+          background-color: #00509e;
+      }
+
+      /* 首页主视觉图 */
+      .hero {
+          background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
+          background-size: cover;
+          background-position: center;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          text-align: center;
+      }
+
+      .hero h2 {
+          font-size: 50px;
+          font-weight: bold;
+      }
+
+      .hero p {
+          font-size: 24px;
+      }
+
+      /* 主体内容布局 */
+      .content {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 20px;
+      }
+
+      .section {
+          width: 32%;
+          background-color: white;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+
+      .section h3 {
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+
+      .section p {
+          font-size: 16px;
+          color: #666;
+      }
+
+      /* 新闻动态部分 */
+      .news {
+          background-color: #003366;
+          color: white;
+          padding: 40px 20px;
+          text-align: center;
+      }
+
+      .news h2 {
+          font-size: 30px;
+          margin-bottom: 20px;
+      }
+
+      .news-item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          background-color: white;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          color: #003366;
+      }
+
+      .news-item h3 {
+          font-size: 18px;
+      }
+
+      .news-item p {
+          font-size: 14px;
+          color: #666;
+      }
+
+      footer {
+          background-color: #003366;
+          color: white;
+          text-align: center;
+          padding: 20px;
+          margin-top: 40px;
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+          .content {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          .section {
+              width: 80%;
+              margin-bottom: 20px;
+          }
+
+          .news-item {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      }
+  </style>
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<header>
+    <h1>浅川科學大學|あさかわかがくだいがく</h1>
+    <p>推动科学与文化发展</p>
+</header>
+
+<!-- 导航菜单 -->
+<nav>
+    <a href="index.html" class="nav-link">首页</a>
+    <a href="departments.html" class="nav-link">学院与学科</a>
+    <a href="admissions.html" class="nav-link">招生信息</a>
+    <a href="research.html" class="nav-link">科研成果</a>
+    <a href="news.html" class="nav-link">新闻动态</a>
+    <a href="contact.html" class="nav-link">联系我们</a>
+</nav>
+
+<!-- 招生信息内容 -->
+<style>
+    /* 主体内容布局 */
+    .content {
+        display: flex;
+        flex-direction: column;  /* 保持竖直排列 */
+        align-items: stretch;    /* 让每个section占满父容器的宽度 */
+        padding: 40px 20px;
+    }
+
+    .section {
+        width: 100%;             /* 让section的宽度占满整个父容器 */
+        margin-bottom: 7px;     /* 每个部分之间的间距 */
+        background-color: rgba(131, 128, 128, 0.5);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgb(247, 247, 247);
+        text-align: center;
+    }
+
+    .section h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .section p {
+        font-size: 16px;
+        color: #ffffffa8;
+    }
+    .college-image {
+        max-width: 100%; /* 使图片最大宽度为容器宽度 */
+        height: auto; /* 保持图片比例 */
+        border-radius: 8px; /* 图片圆角 */
+        margin-top: 20px; /* 图片上方的间距 */
+        display: block; /* 使图片成为块级元素，避免旁边有文本 */
+        margin-left: auto;
+        margin-right: auto; /* 使图片居中显示 */
+    }
+</style>
+<style>
+    .content h2, .content p {
+        color: rgb(255, 255, 255); /* 设置文字颜色为白色 */
+    }
+</style>
+<div class="content">
+    <h2>招生信息</h2>
+</div>
+<style>
+    .content h3, .content p {
+        color: rgb(255, 255, 255); /* 设置文字颜色为白色 */
+    }
+</style>
+<div class="content">
+    <h3>浅川科学大学每年面向国内外招收优秀学生，提供本科、硕士和博士层次的招生机会。</h3>
+</div>
+<style>
+    .section h3, .content p {
+        color: rgb(255, 255, 255); /* 设置文字颜色为白色 */
+    }
+</style>
+<div class="section">
+    <h3>本科招生</h3>
+   <p>我们招收来自世界各地的优秀学生，提供多个学科的本科课程。每年春季和秋季有两个招生周期。</p>
+</div>
+    
+    <div class="section">
+        <h3>硕士与博士招生</h3>
+        <p>欢迎具有本科学位的学生申请硕士与博士学位课程。我们提供丰富的研究资源和学术指导。</p>
+    </div>
+
+    <div class="section">
+        <h3>国际学生招生</h3>
+        <p>我们热烈欢迎国际学生的加入，为其提供全方位的支持与资源。</p>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+    <p>地址：日本東京都文京区目白台2丁目8-2 | 电话：03-3726-11114514 | 邮箱：qianchuanimc@163.com</p>
+</footer>
+
+</body>
+</html>
