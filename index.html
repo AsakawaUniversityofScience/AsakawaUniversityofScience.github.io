@@ -7,27 +7,29 @@
     <title>浅川科学大学</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f7f7f7;
         }
 
+        /* 顶部导航栏样式 */
         header {
-            background-color: #2C3E50;
+            background-color: #003366;
             color: white;
-            padding: 20px;
+            padding: 15px 0;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
+            font-size: 36px;
         }
 
         nav {
+            background-color: #003366;
             display: flex;
             justify-content: center;
-            background-color: #34495E;
             padding: 10px 0;
         }
 
@@ -35,107 +37,164 @@
             color: white;
             text-decoration: none;
             padding: 14px 20px;
-            text-align: center;
             font-size: 18px;
+            text-align: center;
         }
 
         nav a:hover {
-            background-color: #1ABC9C;
+            background-color: #00509E;
         }
 
-        section {
-            padding: 20px;
+        /* 页面主体样式 */
+        .section {
+            padding: 60px 20px;
         }
 
-        .intro, .departments {
+        .section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .intro, .departments, .news {
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
         }
 
-        .intro div, .departments div {
-            background-color: #fff;
+        .intro div, .departments div, .news div {
+            background-color: #ffffff;
             border: 1px solid #ddd;
             padding: 20px;
             width: 30%;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .departments div {
+            padding: 30px;
+        }
+
+        .news div {
+            padding: 15px;
         }
 
         footer {
-            background-color: #2C3E50;
+            background-color: #003366;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
+            padding: 20px;
+            position: relative;
             bottom: 0;
+            width: 100%;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .intro, .departments, .news {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .intro div, .departments div, .news div {
+                width: 80%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- 顶部导航栏 -->
 <header>
     <h1>浅川科学大学</h1>
-    <p>致力于创新与探索</p>
+    <p>致力于创新与卓越</p>
 </header>
 
+<!-- 导航菜单 -->
 <nav>
-    <a href="#about">关于我们</a>
+    <a href="#about">学校简介</a>
     <a href="#departments">学院与学科</a>
     <a href="#admissions">招生信息</a>
+    <a href="#news">最新动态</a>
     <a href="#contact">联系我们</a>
 </nav>
 
-<section id="about">
-    <h2>关于我们</h2>
+<!-- 学校简介 -->
+<section id="about" class="section">
+    <h2>关于浅川科学大学</h2>
     <div class="intro">
         <div>
             <h3>学校概况</h3>
-            <p>浅川科学大学创建于20世纪80年代，是一所以科学研究和技术创新为核心的综合性大学。学校位于美丽的浅川市，拥有一流的教学设施和研究平台。</p>
+            <p>浅川科学大学创建于1980年，位于美丽的浅川市，致力于培养具有全球视野的创新型人才，推动科学技术的不断发展。</p>
         </div>
         <div>
-            <h3>校训</h3>
-            <p>“求知、求真、创新、服务社会”。我们的目标是培养具有全球视野的创新型人才，推动科学技术的不断发展。</p>
+            <h3>学校文化</h3>
+            <p>我们的校训是“求知、求真、创新”。学校倡导自由探索的学术氛围，鼓励学生独立思考，勇于创新。</p>
         </div>
         <div>
-            <h3>我们的使命</h3>
-            <p>致力于培养能在各自领域内成为领军人物的学生，推动科学、技术和文化的跨界发展，服务社会的可持续发展。</p>
+            <h3>办学理念</h3>
+            <p>浅川科学大学秉承“教学、科研、服务社会”的理念，致力于推动跨学科的合作与创新，为社会培养高素质的科技人才。</p>
         </div>
     </div>
 </section>
 
-<section id="departments">
+<!-- 学院与学科 -->
+<section id="departments" class="section">
     <h2>学院与学科</h2>
     <div class="departments">
         <div>
             <h3>计算机科学学院</h3>
-            <p>该学院致力于计算机科学及其应用的研究与教育，培养优秀的计算机领域人才，推动信息技术的革新与发展。</p>
+            <p>计算机科学学院专注于人工智能、数据科学、软件工程等领域的研究，致力于培养技术型与创新型的人才。</p>
         </div>
         <div>
             <h3>物理学学院</h3>
-            <p>物理学学院致力于基础物理的研究，涵盖量子物理、理论物理等多个领域，是学生探索物理奥秘的摇篮。</p>
+            <p>物理学学院聚焦于现代物理及其应用研究，探索基础科学与前沿技术的结合，推动物理学的创新发展。</p>
         </div>
         <div>
-            <h3>生物科学学院</h3>
-            <p>生物科学学院为学生提供生物学的多元化学习路径，涵盖遗传学、生态学、生物技术等前沿领域。</p>
+            <h3>生命科学学院</h3>
+            <p>生命科学学院研究涉及基因组学、分子生物学等领域，致力于生物医药和健康产业的发展，推动生物科学的突破。</p>
         </div>
     </div>
 </section>
 
-<section id="admissions">
+<!-- 招生信息 -->
+<section id="admissions" class="section">
     <h2>招生信息</h2>
-    <p>浅川科学大学面向全国招收本科及研究生，欢迎各地优秀学子报考。每年我们都会组织多场招生咨询会，提供最新的招生信息。</p>
+    <p>浅川科学大学面向全国招收本科生、研究生，欢迎有志的学子加入我们。我们的招生信息将在每年的6月和12月公布，敬请关注。</p>
 </section>
 
-<section id="contact">
+<!-- 最新动态 -->
+<section id="news" class="section">
+    <h2>最新动态</h2>
+    <div class="news">
+        <div>
+            <h3>学校新址揭牌仪式</h3>
+            <p>2025年4月，浅川科学大学新校区揭牌仪式成功举行，标志着学校迈入了新的发展阶段。</p>
+        </div>
+        <div>
+            <h3>创新科技大会</h3>
+            <p>2025年5月，学校将举办首届“创新科技大会”，邀请国内外知名专家学者分享最新科研成果。</p>
+        </div>
+        <div>
+            <h3>招生说明会</h3>
+            <p>2025年6月，学校将举行线上和线下招生说明会，详细解答报考问题，欢迎考生及家长参加。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 联系我们 -->
+<section id="contact" class="section">
     <h2>联系我们</h2>
     <p>地址：浅川市科技路100号</p>
     <p>电话：010-12345678</p>
     <p>邮箱：info@qianchuan.edu.cn</p>
 </section>
 
+<!-- 页脚 -->
 <footer>
-    <p>浅川科学大学 &copy; 2025</p>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
 </footer>
 
 </body>
