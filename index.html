@@ -47,6 +47,7 @@
 
         /* 页面主体样式 */
         .section {
+            display: none; /* 默认不显示内容 */
             padding: 60px 20px;
         }
 
@@ -114,11 +115,11 @@
 
 <!-- 导航菜单 -->
 <nav>
-    <a href="#about">学校简介</a>
-    <a href="#departments">学院与学科</a>
-    <a href="#admissions">招生信息</a>
-    <a href="#news">最新动态</a>
-    <a href="#contact">联系我们</a>
+    <a href="#" onclick="showSection('about')">学校简介</a>
+    <a href="#" onclick="showSection('departments')">学院与学科</a>
+    <a href="#" onclick="showSection('admissions')">招生信息</a>
+    <a href="#" onclick="showSection('news')">最新动态</a>
+    <a href="#" onclick="showSection('contact')">联系我们</a>
 </nav>
 
 <!-- 学校简介 -->
@@ -196,6 +197,26 @@
 <footer>
     <p>&copy; 2025 浅川科学大学 | 版权所有</p>
 </footer>
+
+<script>
+    // 默认显示学校简介
+    showSection('about');
+
+    // 切换显示不同的部分
+    function showSection(sectionId) {
+        // 隐藏所有部分
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // 显示点击的部分
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+</script>
 
 </body>
 </html>
