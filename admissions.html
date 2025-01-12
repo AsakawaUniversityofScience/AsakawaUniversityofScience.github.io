@@ -170,8 +170,8 @@
 
 <!-- 顶部导航栏 -->
 <header>
-    <h1>浅川科學大學|あさかわかがくだいがく</h1>
-    <p>推动科学与文化发展</p>
+    <h1>浅川科學大學| あさかわかがくだいがく</h1>
+    <p>了解浅川科學大學的招生模式</p>
 </header>
 
 <!-- 导航菜单 -->
@@ -221,6 +221,58 @@
         display: block; /* 使图片成为块级元素，避免旁边有文本 */
         margin-left: auto;
         margin-right: auto; /* 使图片居中显示 */
+    }
+        /* 添加淡入效果 */
+        body {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* 导航栏悬停效果 */
+    nav a:hover {
+        background-color: #00509e;
+        transform: scale(1.1); /* 放大效果 */
+        transition: all 0.3s ease;
+    }
+
+    /* 主视觉图文字动画 */
+    .hero div {
+        animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* 新闻动态浮动效果 */
+    .news-item {
+        animation: floatIn 1.5s ease-out;
+    }
+
+    @keyframes floatIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
 <style>

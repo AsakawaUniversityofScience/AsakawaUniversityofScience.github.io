@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数学科学学院 - 浅川科学大学</title>
+    <style>
+        /* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.teacher {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.teacher img:hover {
+    animation: scaleUp 0.3s ease-in-out;
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+    transition: transform 0.3s ease;
+}
+
+/* 标题和内容渐入效果 */
+header h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.teacher-info h2 {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+footer p {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 链接悬停效果 */
+a {
+    text-decoration: none;
+    color: #003366;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #0077cc;
+    transform: scale(1.05);
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .teacher {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .teacher img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .teacher-info {
+            flex: 1;
+        }
+
+        .teacher-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .teacher-info p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* 边栏样式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffcc33;
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 添加左侧边栏 -->
+    <div class="sidebar">
+        <a href="departments.html">返回学院与学科</a>
+    </div>
+
+<header>
+    <h1>数学科学学院 - 师资信息与学院介绍</h1>
+</header>
+
+<div class="container">
+
+    <div class="introduction">
+        <h2>学院介绍</h2>
+        <p>
+            数学科学学院成立于2024年，是浅川科学大学成立的第一批学院之一。作为从唐小菲大学里走出来的学院，一直致力于培养具有扎实抽象理论基础、优秀实践能力和唐氏精神的数学人才，涵盖分析、代数、几何、优化、数学物理等多个研究方向。
+        </p>
+        <p>
+            学院目前，拥有一批享有盛誉的学者与教授作为骨干和中坚力量。近年来，学院科研成果颇丰，在各种期刊发表了各类论文，参加了多次学术会议。
+        </p>
+        <p>
+            此外，学院注重国际交流与合作，与Vtuber宇宙知名高校-唐小菲大学建立了长期合作关系，为学生提供了广阔的学术视野与发展空间。
+        </p>
+    </div>
+<!-- 老师4：猫娘神 -->
+<div class="teacher">
+    <img src="mns.jpg" alt="猫娘神">
+    <div class="teacher-info">
+        <h2>猫娘神</h2>
+        <p><strong>性别：</strong>♀</p>
+        <p><strong>年龄：</strong>18岁</p>
+        <p><strong>职称：</strong>教授</p>
+        <p><strong>所属学院：</strong>数学科学学院</p>
+        <p><strong>教育经历：</strong></p>
+        <ul>
+            <li>唐小菲大学  唐诗文学 博士</li>
+            <li>唐小菲大学  低等数学  硕士</li>
+            <li>唐小菲大学  数学与应用数学 学士</li>
+        </ul>
+        <p><strong>研究方向：</strong>数学物理</p>
+        <p><strong>出版文献：</strong></p>
+        <ul class="publications">
+            <li><a href="https://zhuanlan.zhihu.com/p/10017156504" target="_blank" >《数学系博士的失败相亲》, 2024-12-01</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/7415766298" target="_blank" >《高考结束的那天我玩了一晚上的游戏》, 2024-11-18</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/6739854115" target="_blank" >《数学系博士教你当挂壁家里蹲》, 2024-11-14</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/4885264987" target="_blank" >《Math Note》, 2024-11-04</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/2574450789" target="_blank" >《人生几个信仰崩塌的时刻》,2024-10-22 </a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/715624605" target="_blank" >《数学系博士教你在七夕节当小丑》,  2024-08-21</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/712265413" target="_blank" >《只学数分高代竟然也可以找到女朋友吗？》,2024-08-01</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/708368335" >《优秀的博士生都是不撸管的》,  2024-07-12</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/700190586" target="_blank" >《一期一会》, 2024-05-28</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/685270752" >《数学系博士教你当小丑（镜像篇）》, 2024-03-04 </a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/683999461" target="_blank" >《数学系博士教你当小丑》, 2024-02-26</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/683999461" target="_blank" >《数学系博士教你嗯造牛排》, 2024-02-26</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/674144254" target="_blank" >《心理咨询记》,  2023-12-25</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/670090173" target="_blank" >《日记》,  2023-12-03</a></li>
+            <li><a href="https://zhuanlan.zhihu.com/p/661889547" target="_blank" >《小镇做题家》, 2023-10-17</a></li>
+        </ul>
+    </div>
+</div>
+    <!-- 老师1：浅川爱 -->
+    <div class="teacher">
+        <img src="qca.jpg" alt="浅川 爱">
+        <div class="teacher-info">
+            <h2>浅川 爱</h2>
+            <p><strong>性别：</strong>♀</p>
+            <p><strong>姓名：</strong>浅川爱</p>
+            <p><strong>年龄：</strong>18岁</p>
+            <p><strong>职称：</strong>教授</p>
+            <p><strong>所属学院：</strong>数学科学学院</p>
+            <p><strong>教育经历：</strong></p>
+            <ul>
+                <li>唐小菲大学  低等数学 博士</li>
+                <li>唐小菲大学 计算数学  硕士</li>
+                <li>唐小菲大学 数学与应用数学 学士</li>
+            </ul>
+            <p><strong>研究方向：男娘信息学</strong></p>
+            <p><strong>出版文献：</strong></p>
+            <ul class="publications">
+                <li><a href="https://zhuanlan.zhihu.com/p/8769033739" target="_blank" >《男娘心理吸引力研究》, 2024.11.24</a></li>
+                <li><a href="https://www.zhihu.com/question/324710836/answer/3554727054" target="_blank" >《人为什么会困，生物学有没有什么解释？》, 2024.07.08</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 老师2：微分妹妹 -->
+    <div class="teacher">
+        <img src="wfmm.jpg" alt="微分妹妹">
+        <div class="teacher-info">
+            <h2>微分妹妹</h2>
+            <p><strong>性别：</strong>♀</p>
+            <p><strong>年龄：</strong>18岁</p>
+            <p><strong>职称：</strong>教授</p>
+            <p><strong>所属学院：</strong>数学科学学院</p>
+            <p><strong>教育经历：</strong></p>
+            <ul>
+                <li>浅川科学大学  基础数学 博士</li>
+                <li>北京师范大学  基础数学  硕士</li>
+                <li>北京交通大学 数学与应用数学 学士</li>
+            </ul>
+            <p><strong>研究方向：</strong>调和分析</p>
+            <p><strong>出版文献：</strong>-</p>
+        </div>
+    </div>
+
+    <!-- 老师3：柯希莫 -->
+    <div class="teacher">
+        <img src="kxm.jpg" alt="柯希莫">
+        <div class="teacher-info">
+            <h2>柯希莫</h2>
+            <p><strong>性别：</strong>♂</p>
+            <p><strong>年龄：</strong>21岁</p>
+            <p><strong>职称：</strong>教授</p>
+            <p><strong>所属学院：</strong>数学科学学院</p>
+            <p><strong>教育经历：</strong></p>
+            <ul>
+                <li>浅川科学大学  基础数学 博士</li>
+                <li>唐小菲大学    基础数学  硕士</li>
+                <li>唐小菲大学 数学与应用数学 学士</li>
+            </ul>
+            <p><strong>研究方向：</strong>-</p>
+            <p><strong>出版文献：</strong>-</p>
+        </div>
+    </div>
+
+    
+
+</div>
+
+<footer>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+</footer>
+
+</body>
+</html>
