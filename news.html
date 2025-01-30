@@ -9,169 +9,194 @@
     <style>
     /* 全局样式 */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  body {
-      background-image: url('news.jpg'); /* 替换为实际的图片路径 */
-      background-size: cover; /* 图片自适应屏幕大小 */
-      background-position: center center; /* 图片居中显示 */
-      background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
-      font-family: 'Arial', sans-serif;
-      color: #333;
-  }
-  a {
-      text-decoration: none;
-      color: inherit;
-  }
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: url('news.jpg'); /* 替换为实际的图片路径 */
+        background-size: cover; /* 图片自适应屏幕大小 */
+        background-position: center center; /* 图片居中显示 */
+        background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+        font-family: 'Arial', sans-serif;
+        color: #333;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-  /* 顶部导航栏样式 */
-  header {
-      background-color: #003366;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-  }
+    /* 顶部导航栏样式 */
+    header {
+        background-color: #003366;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
 
-  header h1 {
-      font-size: 40px;
-      margin: 0;
-  }
+    header h1 {
+        font-size: 40px;
+        margin: 0;
+    }
 
-  nav {
-      background-color: #004080;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-  }
+    nav {
+        background-color: #004080;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
 
-  nav a {
-      color: white;
-      padding: 10px 20px;
-      font-size: 18px;
-      display: block;
-      text-align: center;
-  }
+    nav a {
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        display: block;
+        text-align: center;
+    }
 
-  nav a:hover {
-      background-color: #00509e;
-  }
+    nav a:hover {
+        background-color: #00509e;
+    }
 
-  /* 首页主视觉图 */
-  .hero {
-      background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
-      background-size: cover;
-      background-position: center;
-      height: 500px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-  }
+    /* 首页主视觉图 */
+    .hero {
+        background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
 
-  .hero h2 {
-      font-size: 50px;
-      font-weight: bold;
-  }
+    .hero h2 {
+        font-size: 50px;
+        font-weight: bold;
+    }
 
-  .hero p {
-      font-size: 24px;
-  }
+    .hero p {
+        font-size: 24px;
+    }
 
-  /* 主体内容布局 */
-  .content {
-      display: flex;
-      justify-content: space-between;
-      padding: 40px 20px;
-  }
+    /* 主体内容布局 */
+    .content {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
 
-  .section {
-      width: 32%;
-      background-color: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-  }
+    .section {
+        width: 32%;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
 
-  .section h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-  }
+    .section h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-  .section p {
-      font-size: 16px;
-      color: #666;
-  }
+    .section p {
+        font-size: 16px;
+        color: #666;
+        height: 0; /* 初始状态不显示 */
+        overflow: hidden;
+        padding: 0 10px;
+        transition: height 0.5s ease-in-out; /* 过渡动画 */
+    }
 
-  /* 新闻动态部分 */
-  .news {
-      background-color: #003366;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-  }
+    /* 新闻动态部分 */
+    .news {
+        background-color: #003366;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+    }
 
-  .news h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-  }
+    .news h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
 
-  .news-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      background-color: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      color: #003366;
-  }
+    .news-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        color: #003366;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
 
-  .news-item h3 {
-      font-size: 18px;
-  }
+    .news-item:hover {
+        transform: scale(1.05);
+    }
 
-  .news-item p {
-      font-size: 14px;
-      color: #666;
-  }
+    .news-item h3 {
+        font-size: 18px;
+    }
 
-  footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-  }
+    .news-item p {
+        font-size: 14px;
+        color: #666;
+        height: 0; /* 初始状态不显示 */
+        padding: 0 10px;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out; /* 过渡动画 */
+    }
 
-  /* 响应式设计 */
-  @media (max-width: 768px) {
-      .content {
-          flex-direction: column;
-          align-items: center;
-      }
+    /* 鼠标悬停时展示内容 */
+    .news-item:hover p {
+        height: 80px; /* 鼠标悬停时展开显示 */
+    }
 
-      .section {
-          width: 80%;
-          margin-bottom: 20px;
-      }
+    footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
 
-      .news-item {
-          flex-direction: column;
-          align-items: flex-start;
-      }
-  }
-</style>
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    </style>
 </head>
 <body>
 
 <!-- 顶部导航栏 -->
 <header>
-    <h1>浅川科學大學| あさかわかがくだいがく</h1>
-    <p>浅川科學大學最近的新闻动态</p>
+    <h1>浅川科学大学 | あさかわかがくだいがく</h1>
+    <p>浅川科学大学最近的新闻动态</p>
 </header>
 
 <!-- 导航菜单 -->
@@ -185,23 +210,99 @@
 </nav>
 
 <!-- 新闻动态内容 -->
-
-<div class="content">
+<div class="news">
     <h2>新闻动态</h2>
-</div>
-    <div class="section">
-        <h3>新校区落成</h3>
-        <p>浅川科学大学的新校区于2024年9月22日正式投入使用，成为现代化校园的新标志。</p>
-    </div>
-    <div class="section">
-        <h3>创新科技大会</h3>
-        <p>2025年5月，学校将举行首届创新科技大会，届时将邀请全球知名学者交流思想。</p>
-    </div>
-    <div class="section">
-        <h3>科研奖学金计划</h3>
-        <p>为了鼓励更多优秀学生投身科研，学校将推出新的科研奖学金计划。</p>
-    </div>
+    <div class="news-item">
+        <div>
+            <h3>浅川科学大学新校区落成：现代化教育版图的全新启航</h3>
+            <p>浅川科学大学的新校区于2024年9月22日正式投入使用，成为现代化校园的新标志。</p>
+            <p>2024年9月22日，浅川科学大学新校区正式落成启用，这座占地50万平方米的智慧校园，以其流线型建筑群与生态化景观设计，成为当代高等教育的新地标。
+                校区内六大核心学院依托前沿学科布局，构建起跨学科融合的创新教育体系，标志着该校向"科技与人文并重"的研究型大学迈进重要一步。
+            </p>数学科学学院：理性思维的圣殿
+            <p>作为建校根基的数学科学学院，新校区为其打造了配备全息投影系统的智能教室群。学院下设代数几何、计算数学、低等数学三大方向，独创"理论-建模-验证"三位一体培养模式。值得一提的是其严格的学术氛围管理规范：公共讨论区禁止非学术交流，三次违规者将启动学术诚信评估程序。
+                学院官网显示，45%的教师具有唐小菲奖提名团队研究背景，并建有全天候开放的数学建模实验室。
 
+            </p>男娘心理学专业：性别研究的先锋领域 <p>隶属于社会学院的特色学科"男娘心理学"，在新校区设有独立的性别研究馆。该专业聚焦亚文化群体的心理建构，开设《性别表演理论》《跨性别认同发展》等12门核心课程。其跨学科实验室通过脑电波追踪与行为分析，解码性别表达与认知的神经机制。2024年新生数据显示，该专业男女比例达1:3，70%学生辅修数字媒体艺术，形成独特的学术生态。
+
+            </p>计算机科学与数据科学学院：未来科技的孵化器 <p>配备每秒千万亿次计算能力的超算中心，该学院形成人工智能、量子计算、社会数据科学三大研究集群。其"产-学-研"协同平台已孵化23家科技企业，学生可参与区块链政务系统、城市大脑等真实项目。学院与MIT联合开设"元宇宙架构"双学位项目，要求学生在虚拟现实环境中完成50%的课程实践。
+
+            </p>外国语学院：跨文化沟通的桥梁 <p>拥有同声传译训练舱和AI语言实验室的外国语学院，独创"三语+"培养体系（主修英/日语+第二外语+专业领域语言）。其科技翻译方向与计算机学院联合开发神经机器翻译系统，文学翻译方向则定期举办莎剧全本演出。学院数据库收录2.3万册多语种学术原著，支持学生开展跨语言文化比较研究。
+
+            </p>政治经济学院：社会问题的解构者 <p>配备政策模拟沙盘与全球经济数据可视化系统，学院形成"理论建模-政策分析-社会实践"培养闭环。其特色课程《热点事件仿真推演》要求学生48小时内完成突发事件的多维度政策响应方案。学院智库定期发布《东亚地缘经济白皮书》，学生可参与外交部委托的跨境贸易协定研究项目。
+
+            </p>史学院：文明基因的传承者 <p>新校区复建的汉代天文台与数字敦煌石窟，构成史学院的沉浸式教学场域。学院开创"微观史学+数字人文"新范式，运用GIS技术重建古代商路变迁，通过社交媒体大数据分析集体记忆形成机制。其学术社群"猫猫蛙的理想国"（QQ群：2150567335）
+        </div>
+    </div>
+    <div class="news-item">
+        <div>
+            <h3>与唐小菲大学合作：构建特殊教育创新共同体</h3> 
+            <p>浅川科学大学与唐小菲大学于2023年签署战略合作协议，共同创立"唐氏学者培养计划"，在特殊教育领域开辟出"学科交叉+个性化支持"的创新路径。
+                两校联合投入8.6亿元建立唐氏综合征教育研究中心，开发出全球首个基于脑机接口的认知强化训练系统，使唐氏学员的抽象思维能力提升率达43%。</p>
+                三维协同培养体系
+                <p>合作项目构建"学术-技能-社会适应"三位一体培养框架：
+                    <br> 1. <strong>跨学科课程模块</strong>：开设《唐氏认知神经科学》《特殊教育AI技术》等16门定制课程，计算机学院开发的适应性学习系统可根据学员脑电波特征实时调整教学节奏
+                    <br> 2. <strong>职业技能工坊</strong>：数据科学实验室配备触觉反馈操作台，使唐氏学员可参与基础数据处理；艺术治疗中心每年举办联合画展，30%作品进入拍卖市场
+                    <br> 3. <strong>社会融合计划</strong>：建立"影子学者"制度，每名唐氏学员匹配浅川常规生共同生活学习，2024年社会适应能力评估得分提升27个百分点</p>
+                    技术创新赋能教育公平
+                    <p>两校联合实验室取得突破性进展：<br> - 情绪识别系统：通过微表情捕捉准确率92%，及时预警心理波动
+                        <br> - 虚拟现实训练舱：模拟超市、地铁等20种社会场景，应急反应合格率从58%提升至89%
+                        <br> - 基因表达调控研究：发现3个与唐氏综合征认知改善相关的表观遗传标记物</p>
+                        全球特殊教育新范式
+                        <p>该合作已产生显著溢出效应：
+                            <br> - 开发《唐氏学习者能力评估量表》被12个国家采用
+                            <br> - 建立的"开放教育资源库"收录3800个教学案例，日均访问量超2万次
+                            <br> - 2024年联合团队在《Nature Neuroscience》发表封面论文，揭示唐氏大脑神经可塑性机制
+                        </p><p>在2024年世界特殊教育大会上，项目负责人李慕白教授指出："这不是简单的帮扶工程，而是通过科技与人文的双重突破，重新定义人类认知多样性的价值。"随着双方共建的"认知多样性研究院"即将落成，这项合作正在改写特殊教育的全球图景。</p>
+        </div>
+    </div>
+    <div class="news-item">
+        <div>
+            <h3>浅川科学大学研究生奖助学金说明</h3> 
+            <p>浅川科学大学与唐小菲大学于2023年签署战略合作协议，共同创立"唐氏学者培养计划"，在特殊教育领域开辟出"学科交叉+个性化支持"的创新路径。
+                两校联合投入8.6亿元建立唐氏综合征教育研究中心，开发出全球首个基于脑机接口的认知强化训练系统，使唐氏学员的抽象思维能力提升率达43%。</p>
+                
+                        <p>为了鼓励更多优秀学生投身科研，学校将推出新的科研奖学金计划。该计划旨在奖励在学术研究、科技创新和社会实践等方面表现突出的学生，以激发他们的科研热情和创新能力。
+
+                        </p> <p><strong>科研奖学金的申请条件：
+           
+                        </strong></p> <ul> <li>申请人必须是全日制在校研究生，且具有良好的学术道德和科研诚信。
+           
+                        </li> <li>申请人需在学术研究、科技创新或社会实践中取得显著成果，如发表高水平论文、获得专利、参与重要科研项目或在省级以上科技竞赛中获奖等。
+           
+                        </li> <li>申请人需提交详细的科研成果报告和相关证明材料。
+           
+                        </li> </ul> <p><strong>科研奖学金的评选流程：
+           
+                        </strong></p> <ol> <li>申请人在规定时间内提交申请材料。
+           
+                        </li> <li>学校组织专家评审委员会对申请材料进行评审。
+           
+                        </li> <li>评审结果公示，接受全校师生的监督。
+           
+                        </li> <li>公示无异议后，学校正式公布获奖名单，并发放奖学金。
+           
+                        </li> </ol> <p><strong>科研奖学金的金额：
+           
+                        </strong></p> <ul> <li>一等奖：20000元/年
+           
+                        </li> <li>二等奖：15000元/年
+           
+                        </li> <li>三等奖：10000元/年
+           
+                        </li> </ul> <p><strong>科研奖学金的发放：
+           
+                        </strong></p> <ul> <li>奖学金按年度评定，一次性发放。
+           
+                        </li> <li>获奖学生需在下一年度继续保持良好的科研表现，否则奖学金将被取消。
+           
+                        </li> </ul> <p>学校希望通过科研奖学金计划，激励更多学生积极参与科研活动，培养他们的科研能力和创新精神，为国家的科技进步和社会发展做出贡献。
+           
+                        </p>
+                </div>
+    </div>
+    
+    </div>
+</div>
 
 <!-- 页脚 -->
 <footer>
