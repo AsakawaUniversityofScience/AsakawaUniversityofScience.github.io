@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数学科学学院 - 浅川科学大学</title>
+    <style>
+        /* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.teacher {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.teacher img:hover {
+    animation: scaleUp 0.3s ease-in-out;
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+    transition: transform 0.3s ease;
+}
+
+/* 标题和内容渐入效果 */
+header h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.teacher-info h2 {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+footer p {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 链接悬停效果 */
+a {
+    text-decoration: none;
+    color: #003366;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #0077cc;
+    transform: scale(1.05);
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .teacher {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .teacher img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .teacher-info {
+            flex: 1;
+        }
+
+        .teacher-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .teacher-info p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* 边栏样式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffcc33;
+    transform: scale(1.1);
+}
+
+
+   /* 左侧边栏样式 */
+   .sidebar {
+            background-color: #210be9;
+            color: white;
+            width: 100px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .sidebar a {
+            display: inline-block;
+            background-color: #2b6bf3; /* 蓝色按钮 */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px; /* 调整按钮的内边距 */
+            border-radius: 5px; /* 圆角效果 */
+            width: 100%; /* 按钮宽度占满边栏 */
+            text-align: center; /* 居中文本 */
+            box-sizing: border-box;
+        }
+
+        .sidebar a:hover {
+            background-color: #0056b3; /* 鼠标悬停时变暗 */
+        }
+
+        /* 右侧主内容区 */
+        .content {
+            flex: 1;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* 媒体查询：屏幕宽度小于768px时，调整布局 */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 添加左侧边栏 -->
+    <div class="container">
+     <div class="sidebar">
+        <a href="departments.html">返回学院与学科</a>
+    </div>
+
+<header>
+    <h1>计算机科学与数据科学学院 - 师资信息与学院介绍</h1>
+</header>
+
+<div class="container">
+
+    <div class="introduction">
+        <h2>学院介绍</h2>
+        <p>
+            计算机科学与数据科学学院成立于2024年，是浅川科学大学成立的第一批学院之一。由璃湘，朝露等国内高校计算专业和数据科学专业的老师，以及来子东京大学情报理工学系的Rice Dragon等教授，就职于国内高科技公司的工程师回声建立
+        </p>
+        <p>
+            学院目前，拥有一批享有盛誉的学者与教授作为骨干和中坚力量。近年来，由于计算机科学以及data science学科的发展势头强劲，学院一直稳中向好地发展。
+        </p>
+        <p>
+            此外，学院注重国际交流与合作，与Vtuber宇宙知名高校-唐小菲大学建立了长期合作关系，为学生提供了广阔的学术视野与发展空间。
+        </p>
+    </div>
+    <a href="24computer.html">点击查看计算机科学与技术专业培养方案</a>
+    <br>
+    <a href="24acm.html">点击查看计算机科学与技术专业（ACM）培养方案</a>
+    <br>
+    <a href="24xinxi.html">点击查看信息工程专业培养方案</a>
+    <br>
+    <a href="24ruangong.html">点击查看软件工程专业培养方案</a>
+    <br>
+    <a href="24tongji.html">点击查看统计专业培养方案</a>
+    <br>
+    <a href="24shuju.html">点击查看大数据管理与应用(大数据和商务管理)专业培养方案</a>
+
+<!-- 老师1：璃湘 -->
+<div class="teacher">
+    <img src="lixiang.jpg" alt="璃湘">
+    <div class="teacher-info">
+        <h2>璃湘</h2>
+        <p><strong>性别：</strong>♀</p>
+        <p><strong>年龄：</strong>18岁</p>
+        <p><strong>职称：</strong>教授</p>
+        <p><strong>所属学院：</strong>计算机科学与数据科学学院</p>
+        <p><strong>教育经历：</strong></p>
+        <ul>
+            <li>浅川科学大学  数据科学 博士</li>
+            <li>浅川科学大学  数据科学  硕士</li>
+            <li>唐小菲大学浅川学院 计算机科学与技术 学士</li>
+        </ul>
+        <p><strong>研究方向：数据科学，数理统计</strong></p>
+        <p><strong>出版文献：</strong></p>
+        <ul class="publications">
+           
+        </ul>
+    </div>
+</div>
+    <!-- 老师2：朝露 -->
+    <div class="teacher">
+        <img src="zhaolu.jpg" alt="朝露">
+        <div class="teacher-info">
+            <h2>朝露</h2>
+            <p><strong>性别：</strong>♀</p>
+            <p><strong>年龄：</strong>21岁</p>
+            <p><strong>职称：</strong>教授</p>
+            <p><strong>所属学院：</strong>计算机科学与数据科学学院</p>
+            <p><strong>教育经历：</strong></p>
+            <ul>
+                <li>北京大学 计算机应用技术 博士</li>
+                <li>北京大学 网络信息工程  硕士</li>
+                <li>北京大学 计算机科学与技术 学士</li>
+            </ul>
+            <p><strong>研究方向：计算机科学，网络信息工程</strong></p>
+            <p><strong>出版文献：</strong></p>
+            <ul class="publications">
+                <li><a href="https://www.zhihu.com/question/4711011890/answer/63210976366" target="_blank" >冰河时期的古人类是怎么冒着极寒天气和崎岖山地穿越白令陆桥到达美洲大陆的, 2024.11.24</a></li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <!-- 老师3：Rice Dargon -->
+    <div class="teacher">
+        <img src="RL.jpg" alt="Rice Dragon">
+        <div class="teacher-info">
+            <h2>Rice Dragon</h2>
+            <p><strong>性别：</strong>♂</p>
+            <p><strong>年龄：</strong>18岁</p>
+            <p><strong>职称：</strong>教授</p>
+            <p><strong>所属学院：</strong>计算机科学与数据科学学院</p>
+            <p><strong>教育经历：</strong></p>
+            <ul>
+                <li>東京大学  情报理工 博士</li>
+                <li>東京大学  情报理工  修士</li>
+                <li>唐小菲大学 计算机科学与技术 学士</li>
+            </ul>
+            <p><strong>研究方向：计算机科学</strong></p>
+            <p><strong>出版文献：</strong>-</p>
+        </div>
+    </div>
+
+    <!-- 老师4：回声 -->
+    <div class="teacher">
+        <img src="hs.jpg" alt="回声">
+        <div class="teacher-info">
+            <h2>回声</h2>
+            <p><strong>性别：</strong>♂</p>
+            <p><strong>年龄：</strong>25岁</p>
+            <p><strong>职称：</strong>正高级工程师</p>
+            <p><strong>所属学院：</strong>计算机科学与数据科学学院</p>
+            <p><strong>教育经历：</strong></p>
+            <ul>
+                <li>华为技术有限公司 工程师</li>
+                <li>唐小菲大学 计算机科学与技术  硕士</li>
+                <li>中山大学 计算机科学与技术 学士</li>
+            </ul>
+            <p><strong>研究方向：</strong>AI System</p>
+            <p><strong>出版文献：</strong></p>
+            <ul class="publications">
+                <li><a href="https://zhuanlan.zhihu.com/p/581620337" target="_blank" >《[工具向]初等数论中各种同余方程的解法》, 2022.11.08</a></li>
+                <li><a href="https://zhuanlan.zhihu.com/p/578930546" target="_blank" >《一道离散数学问题》, 2022.10.31</a></li>
+                <li><a href="https://zhuanlan.zhihu.com/p/538931314" target="_blank" >《从零开始的Matlab学习 Day2》, 2022.07.08</a></li>
+                <li><a href="https://zhuanlan.zhihu.com/p/537713339" target="_blank" >《从零开始的Matlab学习 Day1（自用）》, 2022.07.05</a></li>
+            </ul>
+            
+        </div>
+    </div>
+ <!-- 老师5：德勇 -->
+ <div class="teacher">
+    <img src="dy.jpg" alt="德勇">
+    <div class="teacher-info">
+        <h2>德勇</h2>
+        <p><strong>性别：♀</strong></p>
+        <p><strong>年龄：</strong>22岁</p>
+        <p><strong>职称：</strong>教授</p>
+        <p><strong>所属学院：</strong>计算机科学与数据科学学院/历史学院</p>
+        <p><strong>教育经历：</strong></p>
+        <ul>
+            <li>浅川科学大学 数据科学 博士</li>
+            <li>合肥工业大学 数理统计  硕士</li>
+            <li>中国科学技术大学 数学与应用数学 学士</li>
+        </ul>
+        <p><strong>研究方向：数理统计，概率论，数据科学，历史学</strong></p>
+        <p><strong>出版文献：</strong></p>
+    </div>
+</div>
+    
+</div>
+
+<footer>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+</footer>
+
+</body>
+</html>
