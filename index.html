@@ -215,15 +215,62 @@
             transform: translateY(0);
         }
     }
+/*slogen背景图*/
+.title-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* 适当调整高度 */
+    display: flex;
+    z-index: -1;
+}
+
+.title-bg div {
+    flex: 1; /* 平均分配宽度 */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+   /* 设置5张图片 */
+.title-bg .bg1 { background-image: url('徽记.jpg'); }
+.title-bg .bg2 { background-image: url('计算机学院院徽.jpg'); }
+.title-bg .bg3 { background-image: url('浅科大校徽.jpg'); }
+.title-bg .bg4 { background-image: url('数学科学学院院徽.jpg'); }
+.title-bg .bg5 { background-image: url('qca.jpg'); }
+
+/* 让 header 正常显示在背景前面 */
+header {
+    position: relative;
+    text-align: center;
+    padding: 50px 0; /* 让 header 文字不会被背景挡住 */
+    background-color: rgba(0, 51, 102, 0.7); /* 让背景稍微透明 */
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    position: relative;
+    z-index: 3;
+}
+
+
     </style>
 </head>
 <body>
 
 <!-- 顶部导航栏 -->
 <header>
+    <link rel="icon" href="浅科大校徽.png" type="image/png">
+    <img src="浅科大校徽removebg.png" alt="徽记" style="height: 110px; position: absolute; top: 10px; left: 10px;">
+    <div class="title-bg"></div>
     <h1>浅川科學大學| あさかわかがくだいがく</h1>
     <p>喻深以浅，予决九川</p>
 </header>
+
 
 <!-- 导航菜单 -->
 <nav>
@@ -246,17 +293,20 @@
 
 <!-- 主体内容 -->
 <div class="content">
-    <div class="section">
-        <h3>学校简介</h3>
-        <p>这里是浅川科學大學（あさかわかがくだいがく）成立于2024年</p>
-  <p>This is the Science Asakawa.</p>
-<p>欢迎来到浅科大！
+    <div class="section" style="background: url('浅科大校徽.png') center/cover; position: relative; color: rgb(0, 0, 0); padding: 20px;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.1);"></div>
+    
+        <h3 style="color: rgb(247, 120, 120);">学校简介</h3>
+        <p style="color: rgb(149, 243, 235);">这里是浅川科學大學（あさかわかがくだいがく）成立于2024年</p>
+  <p style="color: rgb(149, 243, 235);">This is the Science Asakawa.</p>
+<p style="color: rgb(149, 243, 235);">欢迎来到浅科大！
 开设数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等相关专业喵
 希望小菲们和谐友爱的交流学习，一起变成自己想成为的人喵！</p>
     </div>
-    <div class="section">
-        <h3>学院与学科</h3>
-        <p>浅川科学大学设有多个学院，涉及数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等领域，培养创新型人才。</p>
+    <div class="section" style="background: url('徽记.jpg') center/cover; position: relative; color: rgb(0, 0, 0); padding: 20px;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.1);"></div>
+        <h3 style="color: rgb(255, 255, 255);">学院与学科</h3>
+        <p style="color: rgb(156, 27, 27);">浅川科学大学设有多个学院，涉及数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等领域，培养创新型人才。</p>
     </div>
     <div class="section">
         <h3>招生信息</h3>
@@ -271,10 +321,13 @@
         <div>
             <h3>新校区落成</h3>
             <p>2024年9月22日，浅川科学大学的新校区正式投入使用，成为现代化校园的象征。</p>
+            <p>浅川科学大学交流群：296640386</p>
         </div>
         <div>
-            <h3>创新科技大会</h3>
-            <p>2025年5月，学校将举办首届创新科技大会，邀请全球知名学者和专家进行学术交流。</p>
+            <h3>图书馆已引入GTM系列丛书</h3>
+            <p>Graduate Texts in Mathematics（GTM）是Springer-Verlag公司</p>
+            <p>出版的一个数学基础系列书籍，包括了数学分析、高等代数、复变分析、</p> 
+            <p>概率论、随机过程等较高层次的优秀数学教材。浅科大图书馆现已引入</p>
         </div>
     </div>
     <div class="news-item">
