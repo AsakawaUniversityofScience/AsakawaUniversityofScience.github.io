@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电气工程学院 - 浅川科学大学</title>
+    <style>
+        /* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.teacher {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.teacher img:hover {
+    animation: scaleUp 0.3s ease-in-out;
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+    transition: transform 0.3s ease;
+}
+
+/* 标题和内容渐入效果 */
+header h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.teacher-info h2 {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+footer p {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 链接悬停效果 */
+a {
+    text-decoration: none;
+    color: #003366;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #0077cc;
+    transform: scale(1.05);
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .teacher {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .teacher img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .teacher-info {
+            flex: 1;
+        }
+
+        .teacher-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        .teacher-info p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* 边栏样式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffcc33;
+    transform: scale(1.1);
+}
+
+
+ 
+
+    </style>
+</head>
+<body>
+
+ 
+
+<header>
+    <h1>电气工程学院 - 师资信息与学院介绍</h1>
+</header>
+
+<div class="container">
+
+    <div class="introduction">
+        <h2>学院介绍</h2>
+        <p>
+            电气工程学院成立于2025年。由来自国内知名高校电气工程自动化专业，现任电气工程学院院长 忘言 主持建立。
+        </p>
+        <p>
+            学院目前处于发展阶段。近年来，考虑到高考志愿中电气工程自动化专业的热门程度，学院或许会有光明的未来。
+        </p>
+        <p>
+            
+        </p>
+    </div>
+    <a href="暂无">点击查看电气工程自动化专业培养方案</a>
+    
+
+<!-- 老师1：璃湘 -->
+<div class="teacher">
+    <img src="wangyan.jpg" alt="忘言">
+    <div class="teacher-info">
+        <h2>忘言</h2>
+        <p><strong>性别：</strong>♂</p>
+        <p><strong>年龄：</strong>18岁</p>
+        <p><strong>职称：</strong>教授</p>
+        <p><strong>所属学院：</strong>电气工程学院</p>
+        <p><strong>教育经历：</strong></p>
+        <ul>
+           
+            <li>浅川科学大学 电气工程自动化 硕士</li>
+            <li>唐小菲大学 电气工程自动化 学士</li>
+        </ul>
+        <p><strong>研究方向：先进输电技术，大功率电力电子器件</strong></p>
+        <p><strong>出版文献：</strong></p>
+        <ul class="publications">
+           
+        </ul>
+    </div>
+</div>
+ 
+    
+</div>
+
+<footer>
+    <p>&copy; 2025 浅川科学大学 | 版权所有</p>
+</footer>
+
+</body>
+</html>
