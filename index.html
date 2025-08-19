@@ -163,101 +163,124 @@
                 align-items: flex-start;
             }
         }
-            /* 添加淡入效果 */
-    body {
-        animation: fadeIn 1.5s ease-in-out;
-    }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
+        /* 添加淡入效果 */
+        body {
+            animation: fadeIn 1.5s ease-in-out;
         }
-        to {
-            opacity: 1;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-    }
 
-    /* 导航栏悬停效果 */
-    nav a:hover {
-        background-color: #00509e;
-        transform: scale(1.1); /* 放大效果 */
-        transition: all 0.3s ease;
-    }
-
-    /* 主视觉图文字动画 */
-    .hero div {
-        animation: slideIn 2s ease-out;
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(50px);
+        /* 导航栏悬停效果 */
+        nav a:hover {
+            background-color: #00509e;
+            transform: scale(1.1); /* 放大效果 */
+            transition: all 0.3s ease;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        /* 主视觉图文字动画 */
+        .hero div {
+            animation: slideIn 2s ease-out;
         }
-    }
 
-    /* 新闻动态浮动效果 */
-    .news-item {
-        animation: floatIn 1.5s ease-out;
-    }
-
-    @keyframes floatIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        /* 新闻动态浮动效果 */
+        .news-item {
+            animation: floatIn 1.5s ease-out;
         }
-    }
-/*slogen背景图*/
-.title-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 150px; /* 适当调整高度 */
-    display: flex;
-    z-index: -1;
-}
 
-.title-bg div {
-    flex: 1; /* 平均分配宽度 */
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-   /* 设置5张图片 */
-.title-bg .bg1 { background-image: url('徽记.jpg'); }
-.title-bg .bg2 { background-image: url('计算机学院院徽.jpg'); }
-.title-bg .bg3 { background-image: url('浅科大校徽.jpg'); }
-.title-bg .bg4 { background-image: url('数学科学学院院徽.jpg'); }
-.title-bg .bg5 { background-image: url('qca.jpg'); }
+        /* 轮播图样式 */
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
-/* 让 header 正常显示在背景前面 */
-header {
-    position: relative;
-    text-align: center;
-    padding: 50px 0; /* 让 header 文字不会被背景挡住 */
-    background-color: rgba(0, 51, 102, 0.7); /* 让背景稍微透明 */
-    z-index: 2;
-}
+        .carousel img {
+            width: 100%;
+            display: block;
+        }
 
-header h1 {
-    font-size: 40px;
-    color: white;
-    margin: 0;
-    position: relative;
-    z-index: 3;
-}
+        .carousel .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
+        .carousel .carousel-inner .carousel-item {
+            flex: 0 0 100%;
+            width: 100%;
+        }
 
+        .carousel .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .carousel .carousel-indicators button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel .carousel-indicators button.active {
+            background-color: white;
+        }
     </style>
 </head>
 <body>
@@ -271,10 +294,9 @@ header h1 {
     <p>喻深以浅，予决九川</p>
 </header>
 
-
 <!-- 导航菜单 -->
 <nav>
-  <a href="index.html">首页</a>
+    <a href="index.html">首页</a>
     <a href="departments.html">学院与学科</a>
     <a href="admissions.html">招生信息</a>
     <a href="research.html">科研成果</a>
@@ -294,13 +316,12 @@ header h1 {
 <div class="content">
     <div class="section" style="background: url('浅科大校徽.png') center/cover; position: relative; color: rgb(0, 0, 0); padding: 20px;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.1);"></div>
-    
         <h3 style="color: rgb(247, 120, 120);">学校简介</h3>
         <p style="color: rgb(149, 243, 235);">这里是浅川科學大學（あさかわかがくだいがく）成立于2024年</p>
-  <p style="color: rgb(149, 243, 235);">This is the Science Asakawa.</p>
-<p style="color: rgb(149, 243, 235);">欢迎来到浅科大！
-开设数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等相关专业喵
-希望小菲们和谐友爱的交流学习，一起变成自己想成为的人喵！</p>
+        <p style="color: rgb(149, 243, 235);">This is the Science Asakawa.</p>
+        <p style="color: rgb(149, 243, 235);">欢迎来到浅科大！
+        开设数学，物理学，政治经济学，英语，日语，计算机科学，临床医学，男娘心理学等相关专业喵
+        希望小菲们和谐友爱的交流学习，一起变成自己想成为的人喵！</p>
     </div>
     <div class="section" style="background: url('徽记.jpg') center/cover; position: relative; color: rgb(0, 0, 0); padding: 20px;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.1);"></div>
@@ -316,28 +337,48 @@ header h1 {
 <!-- 新闻动态 -->
 <div class="news" id="news">
     <h2>最新动态</h2>
-    <div class="news-item">
-        <div>
-            <h3>新校区落成</h3>
-            <p>2024年9月22日，浅川科学大学的新校区正式投入使用，成为现代化校园的象征。</p>
-            <p>浅川科学大学交流群：296640386</p>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="slogan.png" alt="新校区落成">
+                <div class="carousel-caption">
+                    <h3>新校区落成</h3>
+                    <p>2024年9月22日，浅川科学大学的新校区正式投入使用，成为现代化校园的象征。</p>
+                    <p>浅川科学大学交流群：296640386</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="tsgnews.png" alt="图书馆已引入GTM系列丛书">
+                <div class="carousel-caption">
+                    <h3>图书馆已引入GTM系列丛书</h3>
+                    <p>Graduate Texts in Mathematics（GTM）是Springer-Verlag公司出版的一个数学基础系列书籍，包括了数学分析、高等代数、复变分析、概率论、随机过程等较高层次的优秀数学教材。浅科大图书馆现已引入</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="zhaosheng.png" alt="招生简章发布">
+                <div class="carousel-caption">
+                    <h3>招生简章发布</h3>
+                    <p>浅川科学大学2025年招生简章已发布，欢迎报考。请访问我们的官方网站查看详细信息。目前已经可以查询录取信息了</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="mnsnews.png" alt="关于免去教师猫娘神教职，与唐小菲大学合作终止的通知">
+                <div class="carousel-caption">
+                    <h3>关于免去教师猫娘神教职，与唐小菲大学合作终止的通知</h3>
+                    <p>经过核实，该教师存在教育经历造假，经校内会议讨论一致决定给予辞退并解除劳动合同的处理</p>
+                    <p>同时浅川科学大学于2025年5月18日正式宣布终止和唐小菲大学的长期合作关系</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <h3>图书馆已引入GTM系列丛书</h3>
-            <p>Graduate Texts in Mathematics（GTM）是Springer-Verlag公司</p>
-            <p>出版的一个数学基础系列书籍，包括了数学分析、高等代数、复变分析、</p> 
-            <p>概率论、随机过程等较高层次的优秀数学教材。浅科大图书馆现已引入</p>
+        <div class="carousel-controls">
+            <button id="prevBtn">‹</button>
+            <button id="nextBtn">›</button>
         </div>
-    </div>
-    <div class="news-item">
-        <div>
-            <h3>招生简章发布</h3>
-            <p>浅川科学大学2025年招生简章已发布，欢迎报考。请访问我们的官方网站查看详细信息。</p>
-        </div>
-        <div>
-            <h3>关于免去教师猫娘神教职，与唐小菲大学合作终止的通知</h3>
-            <p>经过核实，该教师存在教育经历造假，经校内会议讨论一致决定给予辞退并解除劳动合同的处理</p>
-            <p>同时浅川科学大学于2025年5月18日正式宣布终止和唐小菲大学的长期合作关系</p>
+        <div class="carousel-indicators">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+            <button></button>
         </div>
     </div>
 </div>
@@ -347,6 +388,66 @@ header h1 {
     <p>&copy; 2025 浅川科学大学 | 版权所有</p>
     <p>地址：日本東京都文京区目白台2丁目8-2 | 电话：03-3726-11114514 | 邮箱：qianchuanimc@163.com</p>
 </footer>
+
+<script>
+    console.log("Carousel script loaded.");
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+    const indicators = document.querySelectorAll('.carousel-indicators button');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function showSlide(index) {
+        console.log("Showing slide:", index);
+        const offset = -index * 100;
+        document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+        slides.forEach((slide, i) => {
+            indicators[i].classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        console.log("Previous button clicked.");
+        const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(newIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        console.log("Next button clicked.");
+        const newIndex = (currentIndex + 1) % totalSlides;
+        showSlide(newIndex);
+    });
+
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => {
+            console.log("Indicator clicked:", i);
+            showSlide(i);
+        });
+    });
+
+    // 自动播放
+    let autoPlayInterval = setInterval(() => {
+        console.log("Auto play next slide.");
+        const newIndex = (currentIndex + 1) % totalSlides;
+        showSlide(newIndex);
+    }, 3000);
+
+    // 悬停时暂停自动播放
+    document.querySelector('.carousel').addEventListener('mouseover', () => {
+        console.log("Mouse over carousel, pause auto play.");
+        clearInterval(autoPlayInterval);
+    });
+
+    document.querySelector('.carousel').addEventListener('mouseout', () => {
+        console.log("Mouse out carousel, resume auto play.");
+        autoPlayInterval = setInterval(() => {
+            const newIndex = (currentIndex + 1) % totalSlides;
+            showSlide(newIndex);
+        }, 3000);
+    });
+</script>
 
 </body>
 </html>
