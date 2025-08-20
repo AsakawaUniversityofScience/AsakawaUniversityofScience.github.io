@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>学院与学科 - 浅川科學大學</title>
+    <title>学院与学科 - 浅川科学大学</title>
     <link rel="icon" href="浅川爱.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="浅科大校徽.png" type="image/x-icon">
     <style>
-          /* 全局样式 */
-          * {
+        /* 全局样式 */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
             background-image: url('101.png'); /* 替换为实际的图片路径 */
-            background-size: cover; /* 图片自适应屏幕大小 */
-            background-position: center center; /* 图片居中显示 */
-            background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
             font-family: 'Arial', sans-serif;
-            color: #333;
+            color: #000;
         }
         a {
             text-decoration: none;
@@ -59,87 +59,80 @@
             background-color: #00509e;
         }
 
-        /* 首页主视觉图 */
-        .hero {
-            background-image: url('hero-image.jpg'); /* 替换为实际的图片 */
-            background-size: cover;
-            background-position: center;
-            height: 500px;
+        /* 选项卡样式 */
+        .tabs {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: transparent;
+            padding: 10px 0;
+        }
+
+        .tab {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 50px;
+            padding: 10px 20px;
+            font-size: 24px;
             font-weight: bold;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px; /* 添加缝隙 */
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            width: 100%; /* 设置选项卡宽度与页面对齐 */
+            transition: background-color 0.3s;
         }
 
-        .hero p {
+        .tab:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .tab.active {
+            background-color: #ccc;
+        }
+
+        /* 校徽样式 */
+        .college-logo {
+            width: 24px; /* 设置校徽宽度 */
+            height: 24px; /* 设置校徽高度 */
+            margin-right: 10px; /* 添加与学院名称之间的缝隙 */
+        }
+
+        /* 展开按钮样式 */
+        .expand-btn {
+            cursor: pointer;
             font-size: 24px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        /* 主体内容布局 */
+        .expand-btn:hover {
+            color: #00509e;
+        }
+
+        /* 内容区域样式 */
         .content {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px 20px;
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            animation: fadeIn 0.5s;
+            width: 100%; /* 设置内容区域宽度与页面对齐 */
+            color: white; /* 设置字体颜色 */
         }
 
-        .section {
-            width: 32%;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .content.active {
+            display: block;
         }
 
-        .section h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .section p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        /* 新闻动态部分 */
-        .news {
-            background-color: #003366;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .news h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .news-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            color: #003366;
-        }
-
-        .news-item h3 {
-            font-size: 18px;
-        }
-
-        .news-item p {
-            font-size: 14px;
-            color: #666;
-        }
-
+        /* 页脚样式 */
         footer {
             background-color: #003366;
             color: white;
@@ -147,68 +140,13 @@
             padding: 20px;
             margin-top: 40px;
         }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .section {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-
-            .news-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .section h3 {
-            font-size: 1.8em;
-            color: #00509e;
-            margin-bottom: 15px;
-        }
-
-        .section p {
-            margin-bottom: 10px;
-        }
-
-        .section strong {
-            color: #d9534f;
-        }
-
-        .learn-more {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            background-color: #00509e;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .learn-more:hover {
-            background-color: #003f7d;
-        }
     </style>
 </head>
 <body>
 
 <!-- 顶部导航栏 -->
 <header>
-    <h1>浅川科學大學 | あさかわかがくだいがく</h1>
+    <h1>浅川科学大学 | あさかわかがくだいがく</h1>
     <p>图书馆，学院与学科，帮助学生获取信息资源</p>
 </header>
 
@@ -222,124 +160,42 @@
     <a href="contact.html">联系我们</a>
 </nav>
 
-<!-- 主体内容 -->
-<style>
-    /* 主体内容布局 */
-    .content {
-        display: flex;
-        flex-direction: column;  /* 保持竖直排列 */
-        align-items: stretch;    /* 让每个section占满父容器的宽度 */
-        padding: 40px 20px;
-    }
-
-    .section {
-        width: 100%;             /* 让section的宽度占满整个父容器 */
-        margin-bottom: 7px;     /* 每个部分之间的间距 */
-        background-color: white;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    .section h3 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .section p {
-        font-size: 16px;
-        color: #666;
-    }
-    .college-image {
-        max-width: 100%; /* 使图片最大宽度为容器宽度 */
-        height: auto; /* 保持图片比例 */
-        border-radius: 8px; /* 图片圆角 */
-        margin-top: 20px; /* 图片上方的间距 */
-        display: block; /* 使图片成为块级元素，避免旁边有文本 */
-        margin-left: auto;
-        margin-right: auto; /* 使图片居中显示 */
-    }
-        /* 添加淡入效果 */
-        body {
-        animation: fadeIn 1.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    /* 导航栏悬停效果 */
-    nav a:hover {
-        background-color: #00509e;
-        transform: scale(1.1); /* 放大效果 */
-        transition: all 0.3s ease;
-    }
-
-    /* 主视觉图文字动画 */
-    .hero div {
-        animation: slideIn 2s ease-out;
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* 新闻动态浮动效果 */
-    .news-item {
-        animation: floatIn 1.5s ease-out;
-    }
-
-    @keyframes floatIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-</style>
-
-<div class="content">
-    <div class="section">
+<!-- 选项卡 -->
+<div class="tabs">
+    <div class="tab" onclick="toggleContent('Library')">
+        <img src="tsgnews.png" alt="Library Logo" class="college-logo">
+        <span>图书馆</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Library" class="content">
         <h3>浅川科学大学图书馆</h3>
-        <a href="https://asakawauniversityofscience.github.io/VisualLibrary/" class="library-link">访问：浅川科学大学图书馆</a>
+        <a href="https://asakawauniversityofscience.github.io/VisualLibrary/" class="library-link">点击这里访问：<strong>浅川科学大学图书馆</strong></a>
         <p>这里收录了浅川科学大学进行教学研究用的各种书籍。</p>
-        <a href="https://github.com/AsakawaUniversityofScience/Asakawa-Library-/tree/main" target="_blank" rel="noopener" class="library-link">访问：浅川科学大学图书馆库</a>
+        <a href="https://github.com/AsakawaUniversityofScience/Asakawa-Library-/tree/main" target="_blank" rel="noopener" class="library-link">点击这里访问：<strong>浅川科学大学图书馆库</strong></a>
+        <br>
         <img src="library.png" alt="学院图片" class="college-image">
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>浅川科學大學数学科学学院</h3>
+    <div class="tab" onclick="toggleContent('Math')">
+        <img src="数学科学学院院徽.jpg" alt="Math Logo" class="college-logo">
+        <span>数学科学学院</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Math" class="content">
         <a href="Mathematical.html">查看师资信息与学院介绍>>></a>
         <p>这里是浅川科學大學数学科学学院</p>
         <p> 这里不准水群，大声喧哗者将会被警告一次。</p>
         <p> 两次以上将会被休学，按情况记过处分，达到一定时间后可以申请取消处分。</p>
         <p>加入讨论群：<strong>194997107</strong></p>  
         <img src="qln.gif" alt="笨蛋" />
-
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>男娘心理学专业</h3>
+    <div class="tab" onclick="toggleContent('Psychology')">
+        <img src="mtf.jpg" alt="Psychology Logo" class="college-logo">
+        <span>男娘心理学专业</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Psychology" class="content">
         <p>在现代社会，“男娘”的心理吸引力已成为许多人非常关心的问题。 </p>
         <p>作为超越性别的“男娘”，被很多人接受和支持。 它的吸引力是巨大的。</p>
         <p>尤其是在年轻一代中，美学和新价值观的影响被广泛认为是一种不受传统性别角色束缚的自我表达形式。</p>
@@ -356,51 +212,61 @@
         <a href="https://sissy.game/usr/college/index.html">点击进入男娘大学网络课程中心</a>
         <img src="MZK.gif" alt="瑞希" />
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>计算机科学与数据科学学院</h3>
+    <div class="tab" onclick="toggleContent('Computer')">
+        <img src="计算机学院院徽.jpg" alt="Computer Logo" class="college-logo">
+        <span>计算机科学与数据科学学院</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Computer" class="content">
         <a href="computer&statistical.html">查看师资信息与学院介绍>>></a>
         <p>我们的计算机科学与工程学院致力于计算机技术的前沿研究，培养具有创新能力的技术人才。</p>
         <p>同时融合了统计与数据科学，以满足不断发展的社会需要</p>
         <img src="zhihuquestion.png" alt="问题" />
-        
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>电气工程学院</h3>
+    <div class="tab" onclick="toggleContent('EE')">
+        <img src="数学科学学院院徽.jpg" alt="EE Logo" class="college-logo">
+        <span>电气工程学院</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="EE" class="content">
         <a href="EEofAsakawa.html">查看师资信息与学院介绍>>></a>
         <p>电气工程自动化专业是目前工科的热门专业。</p>
         <p>为了满足不断发展的社会需要，加快学校发展，2025年浅川科学大学开办了电气工程学院</p>
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>外国语学院</h3>
+    <div class="tab" onclick="toggleContent('Foreign')">
+        <img src="wgyxy.jpg" alt="Foreign Logo" class="college-logo">
+        <span>外国语学院</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Foreign" class="content">
         <p>浅川科学大学也会致力于研究一些外语（但主要是英语和日语）</p>
         <p>浅科大希望通过外国语学院的外语课程，帮助小菲们提高外语能力，顺利通过一些语言考试，帮助出国交流拓宽国际视野铺平道路</p>
-        
-        
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>政治经济学院</h3>
+    <div class="tab" onclick="toggleContent('Economics')">
+        <img src="zzjjxy.jpg" alt="Economics Logo" class="college-logo">
+        <span>政治经济学院</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Economics" class="content">
         <p>浅川科學大學政治经济学院致力于关注政治经济文化，学习政治与经济等社会科学知识</p>
         <p>学院尝试通过关注分析社会热点问题，分享解读政治经济教材等提高小菲的政治经济素养</p>
+        <img src="hhh.png" alt="😋" />
     </div>
-</div>
 
-<div class="content">
-    <div class="section">
-        <h3>木柜子音乐学院</h3>
+    <div class="tab" onclick="toggleContent('Music')">
+        <img src="千早爱音.gif" alt="Music Logo" class="college-logo">
+        <span>木柜子音乐学院</span>
+        <span class="expand-btn">-</span>
+    </div>
+    <div id="Music" class="content">
         <p>我们尝试建立一所面向艺术生特长和商业培养的音乐学院</p>
         <p>目前正在筹划建设当中，预计2026年开始招生</p>
+        <img src="无奈.gif" alt="呃呃" />
+        <br>
         <img src="千早爱音.gif" alt="千早爱音" />
     </div>
 </div>
@@ -411,5 +277,23 @@
     <p>地址：日本東京都文京区目白台2丁目8-2 | 电话：03-3726-11114514 | 邮箱：qianchuanimc@163.com</p>
 </footer>
 
+<script>function toggleContent(tabName) {
+var content = document.getElementById(tabName);
+if (content.style.display === "none" || content.style.display === "") {
+content.style.display = "block";
+} else {
+content.style.display = "none";
+}
+}
+// Get all elements with class="tab" and click
+var tablinks = document.getElementsByClassName("tab");
+for (var i = 0; i < tablinks.length; i++) {
+tablinks[i].addEventListener("click", function() {
+var activeTab = this.getAttribute('href');
+document.querySelector(activeTab).classList.add('active');
+});
+}</script> 
+
 </body>
 </html>
+```
